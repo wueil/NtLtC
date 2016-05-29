@@ -1,0 +1,19 @@
+<body>
+<script>
+var input = document.createElement('input');
+var output = document.createElement('div');
+var code = document.createElement('pre');
+
+var f = function (x) {
+  var y = x;
+  return y;
+}
+code.innerHTML = f;
+document.body.appendChild(code);
+document.body.appendChild(input);
+document.body.appendChild(output);
+input.onkeyup = function () {
+  output.innerHTML = f(input.value);
+}
+</script>
+</body>
