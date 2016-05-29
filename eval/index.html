@@ -7,7 +7,15 @@ var input = document.createElement('input');
 var output = document.createElement('pre');
 document.body.appendChild(input);
 document.body.appendChild(output);
-input.onchange = function () {
-  output.innerHTML = eval(input.value);
+function update () {
+  try { 
+    output.innerHTML = eval(input.value);
+    document.title = 'NtLtC : ' + Date();
+  }
+  catch (err) { 
+    output.innerHTML = err; 
+  }
 }
+
+input.onchange = update;
 </script>
