@@ -10,7 +10,7 @@ document.body.appendChild(output);
 function update () {
   try { 
     output.innerHTML = eval(input.value);
-    document.title = 'NtLtC : ' + Date();
+    document.title = 'NtLtC : ' + input.value;
     document.location.hash = btoa(unescape(encodeURIComponent(input.value)));
   }
   catch (err) { 
