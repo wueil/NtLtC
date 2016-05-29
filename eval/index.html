@@ -1,0 +1,13 @@
+---
+layout: mobile
+title: eval
+---
+<script>
+var input = document.createElement('input');
+var output = document.createElement('pre');
+document.body.appendChild(input);
+document.body.appendChild(output);
+input.onchange = function () {
+  output.innerHTML = eval(input.value);
+}
+</script>
